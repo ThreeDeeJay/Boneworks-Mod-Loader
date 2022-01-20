@@ -1,3 +1,4 @@
+using Loader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,10 +49,10 @@ MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
             InitializeComponent();
         }
 
-        private void siticoneControlBox1_Click(object sender, EventArgs e)
+        /*private void siticoneControlBox1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-        }
+        }*/
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -66,21 +67,21 @@ MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
             // }
         }
 
-        private void UpgradeBtn_Click(object sender, EventArgs e)
+        /*private void UpgradeBtn_Click(object sender, EventArgs e)
         {
             KeyAuthApp.upgrade(username.Text, key.Text); // success is set to false so people can't press upgrade then press login and skip logging in. it doesn't matter, since you shouldn't take any action on succesfull upgrade anyways. the only thing that needs to be done is the user needs to see the message from upgrade function
             status.Text = "Status: " + KeyAuthApp.response.message;
             // don't login, because they haven't authenticated. this is just to extend expiry of user with new key.
-        }
+        }*/
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+/*        private void LoginBtn_Click(object sender, EventArgs e)
         {
             KeyAuthApp.login(username.Text,password.Text);
             if (KeyAuthApp.response.success)
             {
-                Main main = new Main();
-                main.Show();
-                this.Hide();
+                Form1 form1 = new Form1();
+                form1.Show();
+                Hide();
             }
             else
                 status.Text = "Status: " + KeyAuthApp.response.message;
@@ -110,6 +111,6 @@ MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
             }
             else
                 status.Text = "Status: " + KeyAuthApp.response.message;
-        }
+        }*/
     }
 }

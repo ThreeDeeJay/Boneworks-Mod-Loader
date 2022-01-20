@@ -21,7 +21,7 @@ namespace KeyAuth
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+			Application.Run(new Loader.Form1());
         }
     }
 }
