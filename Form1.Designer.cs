@@ -29,20 +29,35 @@ namespace Loader
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+			this.panel1 = new System.Windows.Forms.Panel();
 			this.button1 = new System.Windows.Forms.Button();
+			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.SuspendLayout();
+			// 
+			// panel1
+			// 
+			this.panel1.Location = new System.Drawing.Point(145, 12);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(643, 426);
+			this.panel1.TabIndex = 0;
 			// 
 			// button1
 			// 
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(307, 166);
+			this.button1.Location = new System.Drawing.Point(5, 12);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(124, 50);
-			this.button1.TabIndex = 0;
+			this.button1.Size = new System.Drawing.Size(134, 33);
+			this.button1.TabIndex = 1;
 			this.button1.Text = "button1";
 			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// notifyIcon1
+			// 
+			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+			this.notifyIcon1.Text = "Boneworks Mod Downloader";
+			this.notifyIcon1.Visible = true;
 			// 
 			// Form1
 			// 
@@ -51,6 +66,7 @@ namespace Loader
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(90)))), ((int)(((byte)(127)))));
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.button1);
+			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
 			this.ShowIcon = false;
@@ -64,6 +80,8 @@ namespace Loader
 		#endregion
 
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.NotifyIcon notifyIcon1;
 	}
 }
