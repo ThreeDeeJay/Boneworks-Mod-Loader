@@ -36,9 +36,7 @@ namespace Loader
 	{
 		public UserControl3()
 		{
-			InitializeComponent();
-
-			Directory.CreateDirectory("BONEWORKS_Data\\Plugins");			
+			InitializeComponent();		
 		}
 
 		private void bunifuButton2_Click(object sender, EventArgs e)
