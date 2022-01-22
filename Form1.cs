@@ -72,6 +72,16 @@ namespace Loader
 				webClient.DownloadFile("https://cdn.discordapp.com/attachments/933697800120696862/933697831548641300/BackwardsCompatibilityPlugin.dll", file1);
 				webClient.DownloadFile("https://cdn.discordapp.com/attachments/933697800120696862/933701156612505670/ModThatIsNotMod.dll", file2);
 				webClient.DownloadFile("https://cdn.discordapp.com/attachments/933697800120696862/933701156927049758/ModThatIsNotMod.xml", file3);
+
+				DialogResult dialogResult = MessageBox.Show("You'll get instant updates to our application(s), update information and support if needed!", "Would you like to join the development discord server?", MessageBoxButtons.YesNo);
+				if (dialogResult == DialogResult.Yes)
+				{
+					Process.Start("https://discord.gg/pJEbBdsEk6");
+				}
+				else if (dialogResult == DialogResult.No)
+				{
+					MessageBox.Show("We understand, have a great day!");
+				}
 			}
 		}
 
@@ -143,6 +153,11 @@ namespace Loader
 		private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
 		{
 
+		}
+
+		private void bunifuButton6_Click(object sender, EventArgs e)
+		{
+			Process.Start("https://discord.gg/pJEbBdsEk6");
 		}
 	}
 }
