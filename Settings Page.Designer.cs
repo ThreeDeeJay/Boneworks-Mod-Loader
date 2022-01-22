@@ -1,7 +1,7 @@
 ﻿
 namespace Loader
 {
-	partial class UserControl3
+	partial class UserControl4
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -35,19 +35,20 @@ namespace Loader
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(410, 210);
+			this.label1.Font = new System.Drawing.Font("Dosis", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(205, 182);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(93, 13);
+			this.label1.Size = new System.Drawing.Size(302, 122);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "performance page";
+			this.label1.Text = "Soon...";
 			// 
-			// UserControl3
+			// UserControl4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.label1);
-			this.Name = "UserControl3";
-			this.Size = new System.Drawing.Size(774, 447);
+			this.Name = "UserControl4";
+			this.Size = new System.Drawing.Size(713, 487);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

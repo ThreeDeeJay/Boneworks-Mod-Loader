@@ -7,11 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Web;
-using System.Net;
+using System.Runtime.InteropServices;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System;
+using System.Drawing;
+using System.Linq;
+using System.Management;
+using System.Net.NetworkInformation;
+using System.Windows.Forms;
 using System.Diagnostics;
-using System.IO;
 using System.Threading;
+using System.Reflection;
+using System.Net;
+using System.IO;
 
 
 
@@ -23,10 +40,11 @@ namespace Loader
 
 		public Form1()
 		{
-
-
 			InitializeComponent();
-			MessageBox.Show("MAKE SURE YOU PUT THIS EXE AND 'Siticone.UI.dll' ARE IN YOUR BONEWORKS FOLDER");
+
+			label1.Text = "Welcome, " + Environment.UserName;
+
+			MessageBox.Show("MAKE SURE YOU PUT THIS EXE AND ALL DLL FILES ARE IN YOUR BONEWORKS FOLDER");
 			MessageBox.Show("Please wait a few moments while the base Mods/Plugins are installed, the window will pop up automatically once it has finished.");
 			WebClient webClient = new WebClient();
 
@@ -104,6 +122,16 @@ namespace Loader
 			userControl21.Hide();
 			userControl31.Hide();
 			userControl41.Show();
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
+		{
+
 		}
 	}
 }

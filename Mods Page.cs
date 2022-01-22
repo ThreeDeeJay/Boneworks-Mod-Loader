@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Loader
 {
-	public partial class UserControl3 : UserControl
+	public partial class UserControl1 : UserControl
 	{
-		public UserControl3()
+		public UserControl1()
 		{
 			InitializeComponent();
+		}
+
+		private void tabPage1_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
