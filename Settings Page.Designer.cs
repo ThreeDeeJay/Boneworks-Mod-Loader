@@ -45,7 +45,7 @@ namespace Loader
 			this.bunifuButton6.AutoSizeLeftIcon = true;
 			this.bunifuButton6.AutoSizeRightIcon = true;
 			this.bunifuButton6.BackColor = System.Drawing.Color.Transparent;
-			this.bunifuButton6.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(149)))));
+			this.bunifuButton6.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.bunifuButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton6.BackgroundImage")));
 			this.bunifuButton6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
 			this.bunifuButton6.ButtonText = "Remove All Mods";
@@ -74,10 +74,10 @@ namespace Loader
 			this.bunifuButton6.IconRightCursor = System.Windows.Forms.Cursors.Default;
 			this.bunifuButton6.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
 			this.bunifuButton6.IconSize = 25;
-			this.bunifuButton6.IdleBorderColor = System.Drawing.Color.SteelBlue;
+			this.bunifuButton6.IdleBorderColor = System.Drawing.Color.DimGray;
 			this.bunifuButton6.IdleBorderRadius = 33;
 			this.bunifuButton6.IdleBorderThickness = 3;
-			this.bunifuButton6.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(149)))));
+			this.bunifuButton6.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.bunifuButton6.IdleIconLeftImage = null;
 			this.bunifuButton6.IdleIconRightImage = null;
 			this.bunifuButton6.IndicateFocus = true;
@@ -99,11 +99,11 @@ namespace Loader
 			this.bunifuButton6.onHoverState.ForeColor = System.Drawing.Color.White;
 			this.bunifuButton6.onHoverState.IconLeftImage = null;
 			this.bunifuButton6.onHoverState.IconRightImage = null;
-			this.bunifuButton6.OnIdleState.BorderColor = System.Drawing.Color.SteelBlue;
+			this.bunifuButton6.OnIdleState.BorderColor = System.Drawing.Color.DimGray;
 			this.bunifuButton6.OnIdleState.BorderRadius = 5;
 			this.bunifuButton6.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
 			this.bunifuButton6.OnIdleState.BorderThickness = 3;
-			this.bunifuButton6.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(107)))), ((int)(((byte)(149)))));
+			this.bunifuButton6.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.bunifuButton6.OnIdleState.ForeColor = System.Drawing.Color.White;
 			this.bunifuButton6.OnIdleState.IconLeftImage = null;
 			this.bunifuButton6.OnIdleState.IconRightImage = null;
