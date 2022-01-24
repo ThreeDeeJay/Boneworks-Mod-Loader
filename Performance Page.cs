@@ -36,7 +36,12 @@ namespace Loader
 	{
 		public UserControl3()
 		{
-			InitializeComponent();		
+			InitializeComponent();
+
+			label2.Hide();
+			label3.Hide();
+			label4.Hide();
+			label5.Hide();
 		}
 
 		private void bunifuButton2_Click(object sender, EventArgs e)
@@ -55,6 +60,12 @@ namespace Loader
 			string file2 = "BONEWORKS_Data\\Plugins\\openvr_api.dll";
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934406307782471761/openvr_mod.cfg", file1);
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934409256810209380/openvr_api.dll", file2);
+
+			//Show "Applied!" Text
+			Thread.Sleep(7000);
+			label2.Show();
+			Thread.Sleep(2000);
+			label2.Hide();
 		}
 
 		//Quality
@@ -65,6 +76,11 @@ namespace Loader
 			string file2 = "BONEWORKS_Data\\Plugins\\openvr_api.dll";
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934407718511448084/openvr_mod.cfg", file1);
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934409256810209380/openvr_api.dll", file2);
+
+			//Show "Applied!" Text
+			label3.Show();
+			Thread.Sleep(2000);
+			label3.Hide();
 		}
 
 		//Balanced
@@ -75,6 +91,11 @@ namespace Loader
 			string file2 = "BONEWORKS_Data\\Plugins\\openvr_api.dll";
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934408440355356752/openvr_mod.cfg", file1);
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934409256810209380/openvr_api.dll", file2);
+
+			//Show "Applied!" Text
+			label4.Show();
+			Thread.Sleep(2000);
+			label4.Hide();
 		}
 
 		//Performance
@@ -85,6 +106,11 @@ namespace Loader
 			string file2 = "BONEWORKS_Data\\Plugins\\openvr_api.dll";
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934408535213764648/openvr_mod.cfg", file1);
 			webClient.DownloadFile("https://cdn.discordapp.com/attachments/917888058228105278/934409256810209380/openvr_api.dll", file2);
+
+			//Show "Applied!" Text
+			label5.Show();
+			Thread.Sleep(2000);
+			label5.Hide();
 		}
 
 		//Remove Mod
@@ -96,6 +122,11 @@ namespace Loader
 
 			String myPath = "BONEWORKS_Data\\Plugins\\openvr_mod.cfg";
 			File.Delete(myPath);
+		}
+
+		private void UserControl3_Load(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

@@ -121,7 +121,7 @@ namespace Loader
 			userControl41.Hide();
 		}
 
-		private void bunifuButton3_Click(object sender, EventArgs e)
+		private void bunifuButton3_Click_1(object sender, EventArgs e)
 		{
 			userControl11.Show();
 			userControl21.Hide();
@@ -159,5 +159,8 @@ namespace Loader
 		{
 			Process.Start("https://discord.gg/pJEbBdsEk6");
 		}
+
+		
 	}
 }
+		

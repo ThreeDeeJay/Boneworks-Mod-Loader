@@ -30,12 +30,12 @@ namespace Loader
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl3));
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
 			this.label1 = new System.Windows.Forms.Label();
 			this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
 			this.process1 = new System.Diagnostics.Process();
@@ -44,6 +44,10 @@ namespace Loader
 			this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
 			this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
 			this.bunifuButton6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -77,11 +81,11 @@ namespace Loader
 			this.bunifuButton2.ColorContrastOnClick = 45;
 			this.bunifuButton2.ColorContrastOnHover = 45;
 			this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges1.BottomLeft = true;
-			borderEdges1.BottomRight = true;
-			borderEdges1.TopLeft = true;
-			borderEdges1.TopRight = true;
-			this.bunifuButton2.CustomizableEdges = borderEdges1;
+			borderEdges19.BottomLeft = true;
+			borderEdges19.BottomRight = true;
+			borderEdges19.TopLeft = true;
+			borderEdges19.TopRight = true;
+			this.bunifuButton2.CustomizableEdges = borderEdges19;
 			this.bunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -177,11 +181,11 @@ namespace Loader
 			this.bunifuButton1.ColorContrastOnClick = 45;
 			this.bunifuButton1.ColorContrastOnHover = 45;
 			this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges6.BottomLeft = true;
-			borderEdges6.BottomRight = true;
-			borderEdges6.TopLeft = true;
-			borderEdges6.TopRight = true;
-			this.bunifuButton1.CustomizableEdges = borderEdges6;
+			borderEdges20.BottomLeft = true;
+			borderEdges20.BottomRight = true;
+			borderEdges20.TopLeft = true;
+			borderEdges20.TopRight = true;
+			this.bunifuButton1.CustomizableEdges = borderEdges20;
 			this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -267,11 +271,11 @@ namespace Loader
 			this.bunifuButton3.ColorContrastOnClick = 45;
 			this.bunifuButton3.ColorContrastOnHover = 45;
 			this.bunifuButton3.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges5.BottomLeft = true;
-			borderEdges5.BottomRight = true;
-			borderEdges5.TopLeft = true;
-			borderEdges5.TopRight = true;
-			this.bunifuButton3.CustomizableEdges = borderEdges5;
+			borderEdges21.BottomLeft = true;
+			borderEdges21.BottomRight = true;
+			borderEdges21.TopLeft = true;
+			borderEdges21.TopRight = true;
+			this.bunifuButton3.CustomizableEdges = borderEdges21;
 			this.bunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -357,11 +361,11 @@ namespace Loader
 			this.bunifuButton4.ColorContrastOnClick = 45;
 			this.bunifuButton4.ColorContrastOnHover = 45;
 			this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges4.BottomLeft = true;
-			borderEdges4.BottomRight = true;
-			borderEdges4.TopLeft = true;
-			borderEdges4.TopRight = true;
-			this.bunifuButton4.CustomizableEdges = borderEdges4;
+			borderEdges22.BottomLeft = true;
+			borderEdges22.BottomRight = true;
+			borderEdges22.TopLeft = true;
+			borderEdges22.TopRight = true;
+			this.bunifuButton4.CustomizableEdges = borderEdges22;
 			this.bunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -447,11 +451,11 @@ namespace Loader
 			this.bunifuButton5.ColorContrastOnClick = 45;
 			this.bunifuButton5.ColorContrastOnHover = 45;
 			this.bunifuButton5.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges3.BottomLeft = true;
-			borderEdges3.BottomRight = true;
-			borderEdges3.TopLeft = true;
-			borderEdges3.TopRight = true;
-			this.bunifuButton5.CustomizableEdges = borderEdges3;
+			borderEdges23.BottomLeft = true;
+			borderEdges23.BottomRight = true;
+			borderEdges23.TopLeft = true;
+			borderEdges23.TopRight = true;
+			this.bunifuButton5.CustomizableEdges = borderEdges23;
 			this.bunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -537,11 +541,11 @@ namespace Loader
 			this.bunifuButton6.ColorContrastOnClick = 45;
 			this.bunifuButton6.ColorContrastOnHover = 45;
 			this.bunifuButton6.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges2.BottomLeft = true;
-			borderEdges2.BottomRight = true;
-			borderEdges2.TopLeft = true;
-			borderEdges2.TopRight = true;
-			this.bunifuButton6.CustomizableEdges = borderEdges2;
+			borderEdges24.BottomLeft = true;
+			borderEdges24.BottomRight = true;
+			borderEdges24.TopLeft = true;
+			borderEdges24.TopRight = true;
+			this.bunifuButton6.CustomizableEdges = borderEdges24;
 			this.bunifuButton6.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.bunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.bunifuButton6.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -608,10 +612,58 @@ namespace Loader
 			this.bunifuButton6.UseDefaultRadiusAndThickness = true;
 			this.bunifuButton6.Click += new System.EventHandler(this.bunifuButton6_Click);
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(230, 151);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(80, 24);
+			this.label2.TabIndex = 12;
+			this.label2.Text = "Applied!";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.White;
+			this.label3.Location = new System.Drawing.Point(230, 196);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(80, 24);
+			this.label3.TabIndex = 13;
+			this.label3.Text = "Applied!";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.White;
+			this.label4.Location = new System.Drawing.Point(230, 241);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(80, 24);
+			this.label4.TabIndex = 14;
+			this.label4.Text = "Applied!";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.ForeColor = System.Drawing.Color.White;
+			this.label5.Location = new System.Drawing.Point(230, 286);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(80, 24);
+			this.label5.TabIndex = 15;
+			this.label5.Text = "Applied!";
+			// 
 			// UserControl3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.bunifuButton6);
 			this.Controls.Add(this.bunifuButton5);
 			this.Controls.Add(this.bunifuButton4);
@@ -621,6 +673,7 @@ namespace Loader
 			this.Controls.Add(this.label1);
 			this.Name = "UserControl3";
 			this.Size = new System.Drawing.Size(774, 447);
+			this.Load += new System.EventHandler(this.UserControl3_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -636,5 +689,9 @@ namespace Loader
 		private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton4;
 		private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
 		private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton6;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label2;
 	}
 }
