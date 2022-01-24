@@ -21,5 +21,15 @@ namespace Loader
 		{
 
 		}
+
+		private void bunifuButton3_Click(object sender, EventArgs e)
+		{
+			codeModsTab1.Show();
+		}
+
+		private void UserControl1_Load(object sender, EventArgs e)
+		{
+			codeModsTab1.Hide();
+		}
 	}
 }
