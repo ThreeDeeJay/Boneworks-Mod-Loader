@@ -15,6 +15,18 @@ namespace Loader
 		public UserControl1()
 		{
 			InitializeComponent();
+
+
+
+			gamesListView.Sorting = SortOrder.Ascending;
+
+			if (string.IsNullOrEmpty(GameNameIndex.Text)||string.IsNullOrEmpty(ModTypeIndex.Text))
+			{
+				ListViewItem item = new ListViewItem(GameNameIndex.Text);
+				item.SubItems.Add(GameNameIndex.Text);
+				gamesListView.Items.Add(item);
+			}
+
 		}
 
 		private void tabPage1_Click(object sender, EventArgs e)
@@ -24,12 +36,15 @@ namespace Loader
 
 		private void bunifuButton3_Click(object sender, EventArgs e)
 		{
-			codeModsTab1.Show();
 		}
 
 		private void UserControl1_Load(object sender, EventArgs e)
 		{
-			codeModsTab1.Hide();
+		}
+
+		private void gamesListView_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

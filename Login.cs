@@ -1,41 +1,23 @@
-using Loader;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Management;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KeyAuth
 {
     public partial class Login : Form
     {
+        //Really doesn't matter if you see any of this since there's nothing that needs to be secure, and im not using the license system from Keyauth
 
-        /*
-        * 
-        * WATCH THIS VIDEO TO SETUP APPLICATION: https://youtube.com/watch?v=RfDTdiBq4_o
-        * 
-        */
-
-        static string name = "Boneworks"; // application name. right above the blurred text aka the secret on the licenses tab among other tabs
-        static string ownerid = "E5jrgE9r91"; // ownerid, found in account settings. click your profile picture on top right of dashboard and then account settings.
-        static string secret = "ab119b62d5cf5371f4c6aed5e3c134bce83c78d00b4f356a6fd89d267928c11f"; // app secret, the blurred text on licenses tab and other tabs
-        static string version = "1.0"; // leave alone unless you've changed version on website
+        static string name = "Boneworks";
+        static string ownerid = "E5jrgE9r91";
+        static string secret = "ab119b62d5cf5371f4c6aed5e3c134bce83c78d00b4f356a6fd89d267928c11f";
+        static string version = "1.0";
 
         /*
 Optional Functions:
-
 KeyAuthApp.webhook("lfvbBrbFhIr", "?sellerkey=CUqDqlCIgl&type=resethash");
 // send secure request to webhook which is impossible to crack into. the base link set on the website is https://keyauth.com/api/seller/, which nobody except you can see, so the final request is https://keyauth.com/api/seller/?sellerkey=CUqDqlCIgl&type=resethash
-
 // byte[] result = KeyAuthApp.download("902901"); // downloads application file
 // File.WriteAllBytes("C:\\Users\\mak\\Downloads\\KeyAuth-CSHARP-Example-main (5)\\KeyAuth-CSHARP-Example-main\\ConsoleExample\\bin\\Debug\\countkeys.txt", result);
-
 MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
 */
 
@@ -47,12 +29,14 @@ MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
         public Login()
         {
             InitializeComponent();
+
+			
         }
 
-        /*private void siticoneControlBox1_Click(object sender, EventArgs e)
+        private void siticoneControlBox1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-        }*/
+        }
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -65,52 +49,8 @@ MessageBox.Show(KeyAuthApp.var("123456")); // retrieve application variable
             // {
             //     MessageBox.Show("user is not blacklisted");
             // }
+
         }
-
-        /*private void UpgradeBtn_Click(object sender, EventArgs e)
-        {
-            KeyAuthApp.upgrade(username.Text, key.Text); // success is set to false so people can't press upgrade then press login and skip logging in. it doesn't matter, since you shouldn't take any action on succesfull upgrade anyways. the only thing that needs to be done is the user needs to see the message from upgrade function
-            status.Text = "Status: " + KeyAuthApp.response.message;
-            // don't login, because they haven't authenticated. this is just to extend expiry of user with new key.
-        }*/
-
-/*        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            KeyAuthApp.login(username.Text,password.Text);
-            if (KeyAuthApp.response.success)
-            {
-                Form1 form1 = new Form1();
-                form1.Show();
-                Hide();
-            }
-            else
-                status.Text = "Status: " + KeyAuthApp.response.message;
-        }
-
-        private void RgstrBtn_Click(object sender, EventArgs e)
-        {
-            KeyAuthApp.register(username.Text, password.Text, key.Text);
-            if (KeyAuthApp.response.success)
-            {
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-            }
-            else
-                status.Text = "Status: " + KeyAuthApp.response.message;
-        }
-
-        private void LicBtn_Click(object sender, EventArgs e)
-        {
-            KeyAuthApp.license(key.Text);
-            if (KeyAuthApp.response.success)
-            {
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-            }
-            else
-                status.Text = "Status: " + KeyAuthApp.response.message;
-        }*/
     }
 }
+

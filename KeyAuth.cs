@@ -62,9 +62,6 @@ namespace KeyAuth
             [DataMember(IsRequired = false, EmitDefaultValue = false)]
             public user_data_structure info { get; set; }
 
-            [DataMember(IsRequired = false, EmitDefaultValue = false)]
-            public app_data_structure appinfo { get; set; }
-
             [DataMember]
             public List<msg> messages { get; set; }
         }
@@ -92,21 +89,6 @@ namespace KeyAuth
             public string lastlogin { get; set; }
             [DataMember]
             public List<Data> subscriptions { get; set; } // array of subscriptions (basically multiple user ranks for user with individual expiry dates
-        }
-
-        [DataContract]
-        private class app_data_structure
-        {
-            [DataMember]
-            public string numUsers { get; set; }
-            [DataMember]
-            public string numOnlineUsers { get; set; }
-            [DataMember]
-            public string numKeys { get; set; }
-            [DataMember]
-            public string version { get; set; }
-            [DataMember]
-            public string customerPanelLink { get; set; }
         }
         #endregion
         private string sessionid, enckey;
@@ -137,16 +119,20 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, secret, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
+
             if (json.success)
             {
-                load_app_data(json.appinfo);
                 sessionid = json.sessionid;
                 initzalized = true;
             }
             else if (json.message == "invalidver")
             {
                 Process.Start(json.download);
+                Environment.Exit(0);
+            }
+            else
+            {
+                error(json.message);
                 Environment.Exit(0);
             }
 
@@ -181,9 +167,17 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
                 load_user_data(json.info);
+                // optional success msg
+            }
         }
 
         public void login(string username, string pass)
@@ -214,9 +208,17 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
                 load_user_data(json.info);
+                // optional success msg
+            }
         }
 
         public void upgrade(string username, string key)
@@ -246,8 +248,16 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            json.success = false;
-            load_response_struct(json);
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success msg
+            }
         }
 
         public void license(string key)
@@ -278,9 +288,17 @@ namespace KeyAuth
             response = encryption.decrypt(response, enckey, init_iv);
 
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success msg
                 load_user_data(json.info);
+            }
         }
 
         public void setvar(string var, string data)
@@ -308,7 +326,16 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success msg
+            }
         }
 
         public string getvar(string var)
@@ -336,10 +363,18 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+                return null;
+            }
+            else
+            {
+                // optional success msg
                 return json.response;
-            return null;
+            }
         }
 
         public void ban()
@@ -365,7 +400,16 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success msg
+            }
         }
 
         public string var(string varid)
@@ -394,10 +438,17 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+                return null;
+            }
+            else
+            {
                 return json.message;
-            return null;
+            }
         }
 
         public List<msg> chatget(string channelname)
@@ -424,10 +475,17 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+                return null;
+            }
+            else
+            {
                 return json.messages;
-            return null;
+            }
         }
 
         public bool chatsend(string msg, string channelname)
@@ -455,10 +513,16 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                error(json.message);
+                return false;
+            }
+            else
+            {
                 return true;
-            return false;
+            }
         }
 
         public bool checkblack()
@@ -486,19 +550,23 @@ namespace KeyAuth
 
             response = encryption.decrypt(response, enckey, init_iv);
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
+
+            if (!json.success)
+            {
+                return false;
+            }
+            else
+            {
                 return true;
-            return false;
+            }
         }
 
-        public string webhook(string webid, string param, string body = "", string conttype = "")
+        public void webhook(string webid, string param)
         {
             if (!initzalized)
             {
                 error("Please initzalize first");
                 Environment.Exit(0);
-                return null;
             }
 
             var init_iv = encryption.sha256(encryption.iv_key());
@@ -508,8 +576,6 @@ namespace KeyAuth
                 ["type"] = encryption.byte_arr_to_str(Encoding.Default.GetBytes("webhook")),
                 ["webid"] = encryption.encrypt(webid, enckey, init_iv),
                 ["params"] = encryption.encrypt(param, enckey, init_iv),
-                ["body"] = encryption.encrypt(body, enckey, init_iv),
-                ["conttype"] = encryption.encrypt(conttype, enckey, init_iv),
                 ["sessionid"] = encryption.byte_arr_to_str(Encoding.Default.GetBytes(sessionid)),
                 ["name"] = encryption.byte_arr_to_str(Encoding.Default.GetBytes(name)),
                 ["ownerid"] = encryption.byte_arr_to_str(Encoding.Default.GetBytes(ownerid)),
@@ -521,10 +587,16 @@ namespace KeyAuth
             response = encryption.decrypt(response, enckey, init_iv);
 
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
-                return json.response;
-            return null;
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success message
+            }
         }
 
         public byte[] download(string fileid)
@@ -553,10 +625,18 @@ namespace KeyAuth
             response = encryption.decrypt(response, enckey, init_iv);
 
             var json = response_decoder.string_to_generic<response_structure>(response);
-            load_response_struct(json);
-            if (json.success)
-                return encryption.str_to_byte_arr(json.contents);
-            return null;
+
+            if (!json.success)
+            {
+                error(json.message);
+                Environment.Exit(0);
+            }
+            else
+            {
+                // optional success message
+            }
+
+            return encryption.str_to_byte_arr(json.contents);
         }
 
         public void log(string message)
@@ -625,6 +705,7 @@ namespace KeyAuth
                         error("You're connecting too fast to loader, slow down.");
                         Environment.Exit(0);
                         return "";
+                        break;
                     default: // site won't resolve. you should use keyauth.uk domain since it's not blocked by any ISPs
                         error("Connection failure. Please try again, or contact us for help.");
                         Environment.Exit(0);
@@ -633,27 +714,6 @@ namespace KeyAuth
             }
         }
 
-        #region app_data
-        public app_data_class app_data = new app_data_class();
-
-        public class app_data_class
-        {
-            public string numUsers { get; set; }
-            public string numOnlineUsers { get; set; }
-            public string numKeys { get; set; }
-            public string version { get; set; }
-            public string customerPanelLink { get; set; }
-        }
-
-        private void load_app_data(app_data_structure data)
-        {
-            app_data.numUsers = data.numUsers;
-            app_data.numOnlineUsers = data.numOnlineUsers;
-            app_data.numKeys = data.numKeys;
-            app_data.version = data.version;
-            app_data.customerPanelLink = data.customerPanelLink;
-        }
-        #endregion
 
         #region user_data
         public user_data_class user_data = new user_data_class();
@@ -685,22 +745,6 @@ namespace KeyAuth
         }
         #endregion
 
-        #region response_struct
-        public response_class response = new response_class();
-
-        public class response_class
-        {
-            public bool success { get; set; }
-            public string message { get; set; }
-        }
-
-        private void load_response_struct(response_structure data)
-        {
-            response.success = data.success;
-            response.message = data.message;
-        }
-        #endregion
-
         private json_wrapper response_decoder = new json_wrapper(new response_structure());
     }
 
@@ -726,8 +770,7 @@ namespace KeyAuth
             }
             catch
             {
-                Console.WriteLine("\n\n  The session has ended, open program again.");
-                Thread.Sleep(3500);
+                MessageBox.Show("The session has ended, open program again.");
                 Environment.Exit(0);
                 return null;
             }

@@ -4,22 +4,45 @@ using System.Diagnostics;
 using System.Threading;
 using System.Net;
 using System.IO;
+using DiscordRPC;
+using KeyAuth.Properties;
+using DiscordRpcDemo;
 
 //Im aware its messy asf
 
 namespace Loader
 {
 	public partial class Form1 : Form
-	{
 
+
+	{
+		static string version = "1.0";
+
+		private DiscordRpc.EventHandlers handlers;
+		private DiscordRpc.RichPresence presence;
 
 		public Form1()
 		{
 			InitializeComponent();
 
+			//Discord RPC
+			this.handlers = default(DiscordRpc.EventHandlers);
+			DiscordRpc.Initialize("947296555923279933", ref this.handlers, true, null);
+			this.handlers = default(DiscordRpc.EventHandlers);
+			DiscordRpc.Initialize("947296555923279933", ref this.handlers, true, null);
+			this.presence.details = "============";
+			this.presence.state = "Managing BONEWORKS Mods";
+			this.presence.largeImageKey = "bwlogo";
+			this.presence.smallImageKey = "cixx";
+			this.presence.largeImageText = "BONEWORKS Mod Loader";
+			this.presence.smallImageText = "Made with <3 by cixx";
+			DiscordRpc.UpdatePresence(ref this.presence);
 
 
 
+			label2.Text = "v" + version;
+
+			
 
 
 			Directory.CreateDirectory("BONEWORKS_Data\\Plugins");
@@ -166,6 +189,11 @@ namespace Loader
 		}
 
 		private void bunifuSeparator2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label2_Click(object sender, EventArgs e)
 		{
 
 		}
